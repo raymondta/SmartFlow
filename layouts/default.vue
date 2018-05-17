@@ -100,7 +100,8 @@
         drawer: true,
         fixed: false,
         items: [
-          { icon: 'apps', title: 'Welcome', to: '/dashboard' },
+          { icon: 'apps', title: 'Dashboard', to: '/dashboard' },
+          { icon: 'add', title: 'New Request', to: '/requests/new' },
           { icon: 'bubble_chart', title: 'Inspire', to: '/inspire' }
         ],
         miniVariant: false,

@@ -2,10 +2,14 @@
     <v-card dark color="secondary">
           <v-toolbar color="pink">
             <v-toolbar-side-icon></v-toolbar-side-icon>
-            <v-toolbar-title class="white--text">My tasks</v-toolbar-title>
+            <v-toolbar-title class="white--text">My Cart <v-icon>cart</v-icon></v-toolbar-title>
             <v-spacer></v-spacer>
+            
             <v-btn icon>
-              <v-icon>search</v-icon>
+                <v-badge right>
+                <span slot="badge">3</span>
+              <v-icon>shopping_cart</v-icon>
+            </v-badge>
             </v-btn>
           </v-toolbar>
           <v-list two-line>
@@ -30,9 +34,8 @@
               bottom
               right
               color="pink"
-              @click="$router.push('/requests/new')"
             >
-              <v-icon>add</v-icon>
+              <v-icon>check_circle</v-icon>
             </v-btn>
         </v-card>
 </template>
@@ -42,16 +45,16 @@
     data () {
       return {
         items: [
-          { avatar: 'https://randomuser.me/api/portraits/women/71.jpg',
-            title: 'New Employee',
+          { avatar: 'https://cdn0.iconfinder.com/data/icons/logistic-5/32/11_box_package_parcel_logistic_delivery_unpack_open_shipping-512.png',
+            title: 'New Employee Bundle',
             subtitle: "<span class='text--primary'>Ali Connors</span> &mdash; Needs an Engineering bundle" },
           { divider: true, inset: true },
-          { avatar: 'https://randomuser.me/api/portraits/men/11.jpg',
-            title: 'Summer SOW',
+          { avatar: 'https://cdn0.iconfinder.com/data/icons/logistic-5/32/11_box_package_parcel_logistic_delivery_unpack_open_shipping-512.png',
+            title: 'Summer SOW Bundle',
             subtitle: "<span class='text--primary'>Bob - Needs SOW bundle" },
           { divider: true, inset: true },
-          { avatar: 'https://randomuser.me/api/portraits/women/61.jpg',
-            title: 'Existing exployee',
+          { avatar: 'https://cdn0.iconfinder.com/data/icons/logistic-5/32/11_box_package_parcel_logistic_delivery_unpack_open_shipping-512.png',
+            title: 'Existing exployee Bundle',
             subtitle: "<span class='text--primary'>Sandra Adams</span> &mdash; Needs access to a new SAP Transaction" }
         ]
       }

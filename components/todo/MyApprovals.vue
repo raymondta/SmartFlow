@@ -2,7 +2,7 @@
     <v-card dark color="secondary">
           <v-toolbar color="pink">
             <v-toolbar-side-icon></v-toolbar-side-icon>
-            <v-toolbar-title class="white--text">My tasks</v-toolbar-title>
+            <v-toolbar-title class="white--text">My approvals</v-toolbar-title>
             <v-spacer></v-spacer>
             <v-btn icon>
               <v-icon>search</v-icon>
@@ -23,17 +23,6 @@
               </v-list-tile>
             </template>
           </v-list>
-          <v-btn
-              absolute
-              dark
-              fab
-              bottom
-              right
-              color="pink"
-              @click="$router.push('/requests/new')"
-            >
-              <v-icon>add</v-icon>
-            </v-btn>
         </v-card>
 </template>
 

@@ -11,7 +11,7 @@
             <v-icon>check_circle</v-icon>
           </v-btn>
         </v-toolbar>
-        <v-list two-line>
+        <v-list three-line>
           <template v-for="(item, index) in items">
             <v-list-tile
               :key="item.title"
@@ -22,7 +22,17 @@
               <v-list-tile-content>
                 <v-list-tile-title>{{ item.title }}</v-list-tile-title>
                 <v-list-tile-sub-title class="text--primary">{{ item.headline }}</v-list-tile-sub-title>
-                <v-list-tile-sub-title>{{ item.subtitle }}</v-list-tile-sub-title>
+                <v-list-tile-sub-title>
+                    <v-stepper value="1">
+                        <v-stepper-header>
+                        <v-stepper-step step="1">Submitted</v-stepper-step>
+                        <v-divider></v-divider>
+                        <v-stepper-step step="2">Prepared</v-stepper-step>
+                        <v-divider></v-divider>
+                        <v-stepper-step step="3">Delivered</v-stepper-step>
+                        </v-stepper-header>
+                    </v-stepper>
+                </v-list-tile-sub-title>
               </v-list-tile-content>
               <v-list-tile-action>
                 <v-list-tile-action-text>{{ item.action }}</v-list-tile-action-text>
@@ -35,6 +45,7 @@
                   color="yellow darken-2"
                 >star</v-icon>
               </v-list-tile-action>
+              
             </v-list-tile>
             <v-divider v-if="index + 1 < items.length" :key="index"></v-divider>
           </template>
