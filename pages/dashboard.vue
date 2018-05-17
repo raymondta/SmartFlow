@@ -5,17 +5,7 @@
         <todo-list></todo-list>
      </v-flex>
      <v-flex xs6>
-      <v-card dark color="secondary">
-        <v-toolbar color="pink">
-          <v-toolbar-side-icon></v-toolbar-side-icon>
-          <v-toolbar-title class="white--text">My Tasks</v-toolbar-title>
-          <v-spacer></v-spacer>
-          <v-btn icon>
-            <v-icon>search</v-icon>
-          </v-btn>
-        </v-toolbar>
-        <v-card-text class="px-0">6</v-card-text>
-      </v-card>
+      <my-requests></my-requests>
       </v-flex>
     </v-layout>
   </v-container>
@@ -23,10 +13,12 @@
 
 <script>
 import TodoList from '~/components/todo/TodoList'
+import MyRequests from '~/components/requests/MyRequests'
 
 export default {
   components: {
-    TodoList
+    TodoList,
+    MyRequests
   }
 }
 </script>

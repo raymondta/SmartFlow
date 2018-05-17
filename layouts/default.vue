@@ -46,12 +46,25 @@
       </v-btn>
       <v-toolbar-title v-text="title"></v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn
-        icon
-        @click.stop="rightDrawer = !rightDrawer"
-      >
-        <v-icon>menu</v-icon>
-      </v-btn>
+      
+      <v-menu bottom left>
+            <v-btn slot="activator" icon dark>
+              <v-icon>more_vert</v-icon>
+            </v-btn>
+            <v-list>
+              <v-list-tile  @click="logout">
+                <v-list-tile-title>Logout</v-list-tile-title>
+              </v-list-tile>
+            </v-list>
+          </v-menu>
+      <v-avatar
+              size="36px"
+            >
+              <img
+                src="https://avatars0.githubusercontent.com/u/9064066?v=4&s=460"
+                alt=""
+              >
+            </v-avatar>
     </v-toolbar>
     <v-content>
       <v-container>
@@ -87,13 +100,18 @@
         drawer: true,
         fixed: false,
         items: [
-          { icon: 'apps', title: 'Welcome', to: '/' },
+          { icon: 'apps', title: 'Welcome', to: '/dashboard' },
           { icon: 'bubble_chart', title: 'Inspire', to: '/inspire' }
         ],
         miniVariant: false,
         right: true,
         rightDrawer: false,
         title: 'SmartFlow'
+      }
+    },
+    methods: {
+      logout: function () {
+        this.$router.push('/')
       }
     }
   }

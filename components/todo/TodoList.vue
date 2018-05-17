@@ -23,6 +23,16 @@
               </v-list-tile>
             </template>
           </v-list>
+          <v-btn
+              absolute
+              dark
+              fab
+              bottom
+              right
+              color="pink"
+            >
+              <v-icon>add</v-icon>
+            </v-btn>
         </v-card>
 </template>
 
@@ -31,12 +41,17 @@
     data () {
       return {
         items: [
-          { header: 'Today' },
-          { avatar: 'https://randomuser.me/api/portraits/women/71.jpg', title: 'Brunch this weekend?', subtitle: "<span class='text--primary'>Ali Connors</span> &mdash; I'll be in your neighborhood doing errands this weekend. Do you want to hang out?" },
+          { avatar: 'https://randomuser.me/api/portraits/women/71.jpg',
+            title: 'New Employee',
+            subtitle: "<span class='text--primary'>Ali Connors</span> &mdash; Needs an Engineering bundle" },
           { divider: true, inset: true },
-          { avatar: 'https://randomuser.me/api/portraits/men/11.jpg', title: 'Summer BBQ <span class="grey--text text--lighten-1">4</span>', subtitle: "<span class='text--primary'>to Alex, Scott, Jennifer</span> &mdash; Wish I could come, but I'm out of town this weekend." },
+          { avatar: 'https://randomuser.me/api/portraits/men/11.jpg',
+            title: 'Summer SOW',
+            subtitle: "<span class='text--primary'>Bob - Needs SOW bundle" },
           { divider: true, inset: true },
-          { avatar: 'https://randomuser.me/api/portraits/women/61.jpg', title: 'Oui oui', subtitle: "<span class='text--primary'>Sandra Adams</span> &mdash; Do you have Paris recommendations? Have you ever been?" }
+          { avatar: 'https://randomuser.me/api/portraits/women/61.jpg',
+            title: 'Existing exployee',
+            subtitle: "<span class='text--primary'>Sandra Adams</span> &mdash; Needs access to a new SAP Transaction" }
         ]
       }
     }
