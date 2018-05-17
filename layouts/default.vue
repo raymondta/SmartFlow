@@ -93,7 +93,7 @@
         miniVariant: false,
         right: true,
         rightDrawer: false,
-        title: 'Vuetify.js'
+        title: 'SmartFlow'
       }
     }
   }
