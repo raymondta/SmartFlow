@@ -26,27 +26,9 @@
     </v-navigation-drawer>
     <v-toolbar fixed app :clipped-left="clipped">
       <v-toolbar-side-icon @click="drawer = !drawer"></v-toolbar-side-icon>
-      <v-btn
-        icon
-        @click.stop="miniVariant = !miniVariant"
-      >
-        <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"></v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        @click.stop="clipped = !clipped"
-      >
-        <v-icon>web</v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        @click.stop="fixed = !fixed"
-      >
-        <v-icon>remove</v-icon>
-      </v-btn>
       <v-toolbar-title v-text="title"></v-toolbar-title>
       <v-spacer></v-spacer>
-      
+      <v-btn icon @click="liveChatDialog = true"><v-icon>chat</v-icon></v-btn>
       <v-menu bottom left>
             <v-btn slot="activator" icon dark>
               <v-icon>more_vert</v-icon>
@@ -89,20 +71,37 @@
     <v-footer :fixed="fixed" app>
       <span>&copy; 2017</span>
     </v-footer>
+
+    <v-dialog v-model="liveChatDialog" max-width="500px">
+        <v-card>
+          <v-card-text>
+            <live-chat></live-chat>
+          </v-card-text>
+          <v-card-actions>
+            <v-btn @click.stop="liveChatDialog=false">Close</v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
+    
   </v-app>
 </template>
 
 <script>
+  import LiveChat from '~/components/chat/LiveChat'
+
   export default {
+    components: {
+      LiveChat
+    },
     data () {
       return {
+        liveChatDialog: false,
         clipped: false,
         drawer: true,
         fixed: false,
         items: [
           { icon: 'apps', title: 'Dashboard', to: '/dashboard' },
-          { icon: 'add', title: 'New Request', to: '/requests/new' },
-          { icon: 'bubble_chart', title: 'Inspire', to: '/inspire' }
+          { icon: 'add', title: 'New Request', to: '/requests/new' }
         ],
         miniVariant: false,
         right: true,

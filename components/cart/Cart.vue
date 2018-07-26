@@ -34,6 +34,7 @@
               bottom
               right
               color="pink"
+              @click="$router.push('/requests/submitted')"
             >
               <v-icon>check_circle</v-icon>
             </v-btn>
@@ -47,15 +48,15 @@
         items: [
           { avatar: 'https://cdn0.iconfinder.com/data/icons/logistic-5/32/11_box_package_parcel_logistic_delivery_unpack_open_shipping-512.png',
             title: 'New Employee Bundle',
-            subtitle: "<span class='text--primary'>Ali Connors</span> &mdash; Needs an Engineering bundle" },
+            subtitle: "<span class='text--primary'>Ali Connors</span> &mdash; Engineering bundle" },
           { divider: true, inset: true },
           { avatar: 'https://cdn0.iconfinder.com/data/icons/logistic-5/32/11_box_package_parcel_logistic_delivery_unpack_open_shipping-512.png',
             title: 'Summer SOW Bundle',
-            subtitle: "<span class='text--primary'>Bob - Needs SOW bundle" },
+            subtitle: "<span class='text--primary'>SOW bundle" },
           { divider: true, inset: true },
           { avatar: 'https://cdn0.iconfinder.com/data/icons/logistic-5/32/11_box_package_parcel_logistic_delivery_unpack_open_shipping-512.png',
             title: 'Existing exployee Bundle',
-            subtitle: "<span class='text--primary'>Sandra Adams</span> &mdash; Needs access to a new SAP Transaction" }
+            subtitle: "<span class='text--primary'>Sandra Adams</span> &mdash; Access to a new SAP Transaction" }
         ]
       }
     }
